@@ -24,7 +24,6 @@ export class Role extends BaseEntity {
   @ManyToMany(
     type => User,
     user => user.roles,
-    { eager: true },
   )
   @JoinColumn()
   users: User[];
